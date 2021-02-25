@@ -1,4 +1,4 @@
-package fr.diginamic;
+package fr.diginamic.entites;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

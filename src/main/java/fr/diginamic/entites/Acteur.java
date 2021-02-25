@@ -1,4 +1,4 @@
-package fr.diginamic;
+package fr.diginamic.entites;
 
 import java.time.LocalDate;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package fr.diginamic;
+package fr.diginamic.entites;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +11,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Entity
-@Table(name="PAYS")
-public class Pays {
+@Table(name="GENRE")
+public class Genre {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +20,10 @@ public class Pays {
 	private Long id;
 	private String nom;
 	
-	public Pays() {
+	public Genre() {
 
 	}
-	public Pays(String nom) {
+	public Genre(String nom) {
 		super();
 		this.nom = nom;
 	}
@@ -35,13 +35,12 @@ public class Pays {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (!(obj instanceof Pays)) {
+		if (!(obj instanceof Genre)) {
 			return false;
 		}
-		Pays autre = (Pays)obj;
+		Genre autre = (Genre)obj;
 		return new EqualsBuilder().append(nom, autre.getNom()).isEquals();
 	}
-	
 	/** Getter
 	 * @return the id
 	 */
@@ -66,6 +65,4 @@ public class Pays {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
-
 }
